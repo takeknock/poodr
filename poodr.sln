@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poodr", "poodr\poodr.csproj", "{8D235AE6-6B42-48C4-9AD1-3F29C448DC75}"
+	ProjectSection(ProjectDependencies) = postProject
+		{391E901D-CB1B-41CE-ACE4-C3833E84A828} = {391E901D-CB1B-41CE-ACE4-C3833E84A828}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bicycle", "bicycle\bicycle.csproj", "{391E901D-CB1B-41CE-ACE4-C3833E84A828}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D235AE6-6B42-48C4-9AD1-3F29C448DC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D235AE6-6B42-48C4-9AD1-3F29C448DC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D235AE6-6B42-48C4-9AD1-3F29C448DC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D235AE6-6B42-48C4-9AD1-3F29C448DC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391E901D-CB1B-41CE-ACE4-C3833E84A828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391E901D-CB1B-41CE-ACE4-C3833E84A828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391E901D-CB1B-41CE-ACE4-C3833E84A828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391E901D-CB1B-41CE-ACE4-C3833E84A828}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
