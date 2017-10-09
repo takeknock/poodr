@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using bicycle;
+using Bicycle;
 
 namespace poodr
 {
@@ -13,8 +13,11 @@ namespace poodr
         {
             double chainring = 52;
             double cog = 11;
-            Gear gear = new Gear(chainring, cog);
+            double rim = 26;
+            double tire = 1.5;
+            Gear gear = new Gear(chainring, cog, rim, tire);
             Console.WriteLine(gear.ratio.ToString());
+            Console.WriteLine(gear.gearInches.ToString());
         }
     }
 }
