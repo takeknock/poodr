@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bicycle
+namespace bicycle
 {
     public class Gear
     {
@@ -13,7 +13,6 @@ namespace Bicycle
             _chainring = chainring;
             _cog = cog;
         }
-
 
         public Gear(double chainring, double cog, double rim, double tire)
         {
@@ -37,6 +36,7 @@ namespace Bicycle
         {
             get { return _rim + (_tire * 2); }
         }
+
         private double _chainring;
         private double _cog;
         private double _rim;
