@@ -30,7 +30,12 @@ namespace Bicycle
 
         public double gearInches
         {
-            get { return ratio * (_rim + (_tire * 2)); }
+            get { return ratio * diameter; }
+        }
+
+        public double diameter
+        {
+            get { return _rim + (_tire * 2); }
         }
         private double _chainring;
         private double _cog;
