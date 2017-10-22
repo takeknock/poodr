@@ -8,7 +8,7 @@ namespace bicycle
 {
     public class Wheel
     {
-        Wheel(double rim, double tire)
+        public Wheel(double rim, double tire)
         {
             _rim = rim;
             _tire = tire;
