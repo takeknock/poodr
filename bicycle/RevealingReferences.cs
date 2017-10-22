@@ -16,7 +16,12 @@ namespace bicycle
 
         public IEnumerable<double> diameters()
         {
-            return wheels.Select(wheel => wheel.rim + wheel.tire * 2.0);
+            return wheels.Select(wheel => diameter(wheel));
+        }
+
+        private double diameter(Wheel wheel)
+        {
+            return wheel.rim + wheel.tire * 2.0;
         }
 
         private IEnumerable<Wheel> wheelify(List<Tuple<double, double>> data)
