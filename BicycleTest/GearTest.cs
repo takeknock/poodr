@@ -24,7 +24,8 @@ namespace BicycleTest
             double cog = 11;
             double rim = 26;
             double tire = 1.5;
-            Gear gear = new Gear(chainring, cog, rim, tire);
+            Wheel wheel = new Wheel(rim, tire);
+            Gear gear = new Gear(chainring, cog, wheel);
             double expected = 137.09090909;
             Assert.AreEqual(expected, gear.gearInches, 10E-5);
 
