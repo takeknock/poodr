@@ -20,6 +20,7 @@ namespace bicycle
             _cog = cog;
             _rim = rim;
             _tire = tire;
+            _wheel = new { daimeter = diameter};
         }
 
         public double ratio
@@ -41,6 +42,7 @@ namespace bicycle
         private double _cog;
         private double _rim;
         private double _tire;
+        private Object _wheel;
 
         private double chainring
         {
@@ -60,6 +62,11 @@ namespace bicycle
         private double tire
         {
             get { return _tire; }
+        }
+
+        private object wheel
+        {
+            get { return _wheel; }
         }
 
     }
