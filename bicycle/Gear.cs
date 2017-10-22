@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bicycle
+namespace bicycle
 {
     public class Gear
     {
@@ -14,28 +14,43 @@ namespace Bicycle
             _cog = cog;
         }
 
-
-        public Gear(double chainring, double cog, double rim, double tire)
+        public Gear(double chainring, double cog, Wheel wheel)
         {
             _chainring = chainring;
             _cog = cog;
-            _rim = rim;
-            _tire = tire;
+            _wheel = wheel;
         }
 
         public double ratio
         {
-            get{ return _chainring / _cog;}
+            get{ return chainring / cog;}
         }
 
         public double gearInches
         {
-            get { return ratio * (_rim + (_tire * 2)); }
+            get { return ratio * wheel.diameter; }
         }
+
         private double _chainring;
         private double _cog;
-        private double _rim;
-        private double _tire;
+        private Wheel _wheel;
+
+        private double chainring
+        {
+            get { return _chainring; }
+        }
+        
+        private double cog
+        {
+            get { return _cog; }
+        }
+
+
+        private Wheel wheel
+        {
+            get { return _wheel; }
+        }
+
 
     }
 }
