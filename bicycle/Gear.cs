@@ -24,7 +24,7 @@ namespace bicycle
 
         public double ratio
         {
-            get{ return _chainring / _cog;}
+            get{ return chainring / cog;}
         }
 
         public double gearInches
@@ -34,13 +34,33 @@ namespace bicycle
 
         public double diameter
         {
-            get { return _rim + (_tire * 2); }
+            get { return rim + (tire * 2); }
         }
 
         private double _chainring;
         private double _cog;
         private double _rim;
         private double _tire;
+
+        private double chainring
+        {
+            get { return _chainring; }
+        }
+        
+        private double cog
+        {
+            get { return _cog; }
+        }
+
+        private double rim
+        {
+            get { return _rim; }
+        }
+
+        private double tire
+        {
+            get { return _tire; }
+        }
 
     }
 }
