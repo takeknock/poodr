@@ -19,7 +19,7 @@ namespace bicycle
             return wheels.Select(wheel => wheel.rim + wheel.tire * 2.0);
         }
 
-        public IEnumerable<Wheel> wheelify(List<Tuple<double, double>> data)
+        private IEnumerable<Wheel> wheelify(List<Tuple<double, double>> data)
         {
             return data.Select(e => new Wheel(e.Item1, e.Item2));
         }
