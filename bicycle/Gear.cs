@@ -14,11 +14,11 @@ namespace bicycle
             _cog = cog;
         }
 
-        public Gear(double chainring, double cog, double rim, double tire)
+        public Gear(double chainring, double cog, Wheel wheel)
         {
             _chainring = chainring;
             _cog = cog;
-            _wheel = new Wheel(rim, tire);
+            _wheel = wheel;
         }
 
         public double ratio
@@ -51,32 +51,6 @@ namespace bicycle
             get { return _wheel; }
         }
 
-        class Wheel
-        {
-            public Wheel(double rim, double tire)
-            {
-                _rim = rim;
-                _tire = tire;
-            }
-
-            public double diameter
-            {
-                get { return rim + tire * 2.0; }
-            }
-
-            private double _rim;
-            private double _tire;
-
-            private double rim
-            {
-                get { return _rim; }
-            }
-
-            private double tire
-            {
-                get { return _tire; }
-            }
-        }
 
     }
 }

@@ -14,17 +14,22 @@ namespace bicycle
             _tire = tire;
         }
 
+        public double diameter
+        {
+            get { return rim + tire * 2.0; }
+        }
+
         private double _rim;
         private double _tire;
 
         public double rim
         {
-            get { return _rim;}
+            get { return _rim; }
         }
 
         public double tire
         {
-            get{ return _tire;}
+            get { return _tire; }
         }
     }
 }
