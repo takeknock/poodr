@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="GearTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WheelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bicycle\Bicycle.csproj">
