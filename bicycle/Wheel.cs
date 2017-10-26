@@ -14,10 +14,18 @@ namespace bicycle
             _tire = tire;
         }
 
+        // 直径
         public double diameter
         {
             get { return rim + tire * 2.0; }
         }
+
+        // 周
+        public double circumference()
+        {
+            return diameter * Math.PI;
+        }
+
 
         private double _rim;
         private double _tire;
