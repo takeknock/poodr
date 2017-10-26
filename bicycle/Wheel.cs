@@ -21,11 +21,10 @@ namespace bicycle
         }
 
         // 周
-        public double circumference()
+        public double circumference
         {
-            return diameter * Math.PI;
+            get { return diameter * Math.PI;}
         }
-
 
         private double _rim;
         private double _tire;
