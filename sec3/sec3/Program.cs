@@ -11,10 +11,14 @@ namespace sec3
         // Constructors
         public Gear(double chainring, double cog, double rim, double tire)
         {
-            this.chainring = chainring;
-            this.cog = cog;
-            this.rim = rim;
-            this.tire = tire;
+            //this.chainring = chainring;
+            //this.cog = cog;
+            //this.rim = rim;
+            //this.tire = tire;
+            _chainring = chainring;
+            _cog = cog;
+            _rim = rim;
+            _tire = tire;
         }
 
         public double gearInches
@@ -63,8 +67,10 @@ namespace sec3
     {
         public Wheel(double rim, double tire)
         {
-            this.rim = rim;
-            this.tire = tire;
+            //this.rim = rim;
+            //this.tire = tire;
+            _rim = rim;
+            _tire = tire;
         }
 
         public double diameter
