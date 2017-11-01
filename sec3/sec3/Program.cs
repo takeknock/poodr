@@ -30,7 +30,12 @@ namespace sec3
 
         public double gearInches
         {
-            get { return ratio * wheel.diameter(); }
+            get { return ratio * diameter; }
+        }
+
+        private double diameter
+        {
+            get { return wheel.diameter(); }
         }
 
         public double ratio
