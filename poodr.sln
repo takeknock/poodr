@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BicycleTest", "BicycleTest\
 		{391E901D-CB1B-41CE-ACE4-C3833E84A828} = {391E901D-CB1B-41CE-ACE4-C3833E84A828}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sec3", "sec3\sec3\sec3.csproj", "{8637AC7C-4FBF-4FD2-97A2-4941FA3C5F65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{62CDE82B-3410-4E78-AD8C-076D0F6C5F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62CDE82B-3410-4E78-AD8C-076D0F6C5F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62CDE82B-3410-4E78-AD8C-076D0F6C5F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8637AC7C-4FBF-4FD2-97A2-4941FA3C5F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8637AC7C-4FBF-4FD2-97A2-4941FA3C5F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8637AC7C-4FBF-4FD2-97A2-4941FA3C5F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8637AC7C-4FBF-4FD2-97A2-4941FA3C5F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
