@@ -9,7 +9,7 @@ namespace sec3
     public class Gear
     {
         // Constructors
-        public Gear(double chainring, double cog, double rim, double tire)
+        public Gear(double chainring, double cog, IWheel wheel)
         {
             //this.chainring = chainring;
             //this.cog = cog;
@@ -17,13 +17,12 @@ namespace sec3
             //this.tire = tire;
             _chainring = chainring;
             _cog = cog;
-            _rim = rim;
-            _tire = tire;
+            _wheel = wheel;
         }
 
         public double gearInches
         {
-            get { return ratio * new Wheel(rim, tire).diameter; }
+            get { return ratio * wheel.diameter(); }
         }
 
         public double ratio
@@ -56,14 +55,21 @@ namespace sec3
             private set { _tire = tire; }
         }
 
+        private IWheel wheel
+        {
+            get { return _wheel; }
+        }
+
         // member variables
         private double _chainring;
         private double _cog;
         private double _rim;
         private double _tire;
+        private IWheel _wheel;
+
     } // class Gear
 
-    public class Wheel
+    public class Wheel : IWheel
     {
         public Wheel(double rim, double tire)
         {
@@ -73,9 +79,9 @@ namespace sec3
             _tire = tire;
         }
 
-        public double diameter
+        public double diameter()
         {
-            get { return rim + (tire * 2.0); }
+            return rim + (tire * 2.0);
         }
 
         public double rim
@@ -104,7 +110,9 @@ namespace sec3
             double rim = 26;
             double tire = 1.5;
 
-            Console.WriteLine(new Gear(chainring, cog, rim, tire).gearInches);
+            Wheel wheel = new Wheel(rim, tire);
+
+            Console.WriteLine(new Gear(chainring, cog, wheel).gearInches);
 
         }
     }
