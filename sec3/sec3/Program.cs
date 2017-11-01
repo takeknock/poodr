@@ -20,6 +20,14 @@ namespace sec3
             _wheel = wheel;
         }
 
+        public Gear(double chainring, double cog, double rim, double tire)
+        {
+            _chainring = chainring;
+            _cog = cog;
+            _rim = rim;
+            _tire = tire;
+        }
+
         public double gearInches
         {
             get { return ratio * wheel.diameter(); }
@@ -57,7 +65,19 @@ namespace sec3
 
         private IWheel wheel
         {
-            get { return _wheel; }
+            get
+            {
+                if (_wheel == null)
+                {
+                    _wheel = new Wheel(rim, tire);
+                }
+                return _wheel;
+            }
+        }
+
+        private Wheel detailWheel
+        {
+            get { return new Wheel(rim, tire); }
         }
 
         // member variables
@@ -113,6 +133,8 @@ namespace sec3
             Wheel wheel = new Wheel(rim, tire);
 
             Console.WriteLine(new Gear(chainring, cog, wheel).gearInches);
+
+            Console.WriteLine(new Gear(chainring, cog, rim, tire).gearInches);
 
         }
     }
