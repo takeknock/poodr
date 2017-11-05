@@ -9,6 +9,7 @@ namespace sec3
     public class Gear
     {
         // Constructors
+        
         public Gear(double chainring, double cog, IWheel wheel)
         {
             //this.chainring = chainring;
@@ -18,6 +19,30 @@ namespace sec3
             _chainring = chainring;
             _cog = cog;
             _wheel = wheel;
+        }
+
+        public Gear(Dictionary<string, object> param)
+        {
+            // down casts
+            if (param["chainring"] is double)
+            {
+                _chainring = (double)param["chainring"];
+            }
+            else
+            {
+                new ArgumentException();
+            }
+            if (param["cog"] is double)
+            {
+                _cog = (double)param["cog"];
+            }
+            else
+            {
+                new ArgumentException();
+            }
+
+            // need null check of _wheel when it is used.
+            _wheel = param["wheel"] as IWheel;
         }
 
         public Gear(double chainring, double cog, double rim, double tire)
@@ -137,9 +162,18 @@ namespace sec3
 
             Wheel wheel = new Wheel(rim, tire);
 
-            Console.WriteLine(new Gear(chainring, cog, wheel).gearInches);
+            Console.WriteLine(new Gear(cog: cog, wheel: wheel, chainring: chainring).gearInches);
 
             Console.WriteLine(new Gear(chainring, cog, rim, tire).gearInches);
+
+            Dictionary<string, object> param = new Dictionary<string, object>()
+            {
+                { "chainring", chainring },
+                { "cog", cog},
+                { "wheel", wheel }
+            };
+
+            Console.WriteLine(new Gear(param).gearInches);
 
         }
     }
