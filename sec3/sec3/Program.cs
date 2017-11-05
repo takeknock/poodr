@@ -162,7 +162,6 @@ namespace sec3
 
             Wheel wheel = new Wheel(rim, tire);
 
-            Console.WriteLine(new Gear(cog: cog, wheel: wheel, chainring: chainring).gearInches);
 
             Console.WriteLine(new Gear(chainring, cog, rim, tire).gearInches);
 
@@ -174,6 +173,8 @@ namespace sec3
             };
 
             Console.WriteLine(new Gear(param).gearInches);
+
+            Console.WriteLine(new Gear(cog: cog, wheel: wheel, chainring: chainring).gearInches);
 
         }
     }
