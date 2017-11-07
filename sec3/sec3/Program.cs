@@ -176,6 +176,8 @@ namespace sec3
 
             Console.WriteLine(new Gear(cog: cog, wheel: wheel, chainring: chainring).gearInches);
 
+            Console.WriteLine(new sec3_3.Wheel(rim, tire, chainring, cog).gearInches);
+
         }
     }
 }
